@@ -1,0 +1,25 @@
+{
+  "name": "node-database",
+  "version": "1.0.0",
+  "description": "Use Node to link Database (mysql, mongodb) on Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DahengZhang/node-database.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "mysql"
+  ],
+  "author": "DahengZhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DahengZhang/node-database/issues"
+  },
+  "homepage": "https://github.com/DahengZhang/node-database#readme"
+}
