@@ -4,7 +4,7 @@
   "description": "Use Node to link Database (mysql, mongodb) on Express",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/DahengZhang/node-database/issues"
   },
-  "homepage": "https://github.com/DahengZhang/node-database#readme"
+  "homepage": "https://github.com/DahengZhang/node-database#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.2",
+    "mysql": "^2.15.0"
+  }
 }
