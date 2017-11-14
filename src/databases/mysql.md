@@ -10,7 +10,7 @@ flush privileges;
 ```
 ## SQL 语句
 ```
-展示所有数据库列表
+## 展示所有数据库列表
 SHOW DATABASES;
 创建数据库
 CREATE DATABASE 数据库名称;
