@@ -6,8 +6,8 @@
 update mysql.user set password=PASSWORD('新密码') where User='root';
 刷新权限列表
 flush privileges;
-
 ```
+
 ## SQL 语句
 ```
 展示所有数据库列表
@@ -47,4 +47,11 @@ INSERT INTO learn_table (learn_name) VALUES ('张大亨');
 从当前数据库中指定表查询数据
 SELECT 字段名,字段名 FROM 表名 WHERE 条件;
 SELECT learn_name, learn_age FROM learn_table WHERE learn_name='张大亨';
+更新当前数据库中指定表的某些字段
+UPDATE 表名 SET 字段名称=新值 WHERE 条件;
+删除当前数据库中指定表的某条数据
+DELETE FROM 表名 WHERE 条件;
+LIKE语句
+DELETE FROM 表名 WHERE 条件 LIKE '...';
+SELECT * FROM learn_table WHERE learn_age LIKE '%8%' or learn_date LIKE '%8';
 ```
