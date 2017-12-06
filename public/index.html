@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="title">标题</div>
+  <div class="search">
+    <input type="text" id="search">
+    <button onclick="searchTable()">查询</button>
+    <div id="result"></div>
+  </div>
+  <script src="axios.min.js"></script>
+  <script>
+    (function () {
+      axios('/api', {
+        method: 'GET'
+      }).then(response => {
+        console.log(response.data)
+        document.getElementById('title').innerText = response.data
+      })
+    })()
+    function searchTable() {
+      let search = document.getElementById('search').value
+      const resultDom = document.getElementById('result')
+      resultDom.style.border = '0'
+      resultDom.innerText = '正在查询...'
+      axios('/api/search', {
+        method: 'POST',
+        data: { search }
+      }).then(response => {
+        console.log(response.data)
+        resultDom.innerText = JSON.stringify(response.data)
+      }).catch(err => {
+        console.error(err)
+        resultDom.style.border = '1px solid #FF0000'
+        resultDom.innerText = JSON.stringify(err)
+      })
+    }
+  </script>
+</body>
+
+</html>

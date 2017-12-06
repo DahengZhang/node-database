@@ -38,6 +38,8 @@ CREATE TABLE IF NOT EXISTS learn_table (
 
 CREATE TABLE IF NOT EXISTS learn_table (learn_id INT AUTO_INCREMENT,learn_name VARCHAR(100) NOT NULL,learn_age INT NOT NULL DEFAULT 18,learn_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (learn_id))ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+查看表结构
+DESC 表名
 删除当前数据库中指定的表
 DROP TABLE 表名称;
 向当前数据库中指定表插入数据
@@ -54,4 +56,14 @@ DELETE FROM 表名 WHERE 条件;
 LIKE语句
 DELETE FROM 表名 WHERE 条件 LIKE '...';
 SELECT * FROM learn_table WHERE learn_age LIKE '%8%' or learn_date LIKE '%8';
+REGEXP 模糊查询
+SELECT * FROM 表名 WHERE 字段名 REGEXP 匹配内容;
+SELECT * FROM 表名 WHERE 字段名 REGEXP 匹配内容 AND/OR 字段名 REGEXP 匹配内容;
+
+导出数据库
+MySQLdump -u 用户名 -p 数据库名称> 路径\名称.sql
+导入数据库
+SOURCE 路径\文件
+导出表
+MySQLdump -u 用户名 -p 数据库名称 表名> 路径\名称.sql
 ```
